@@ -1,0 +1,64 @@
+.footer
+	position: relative
+	height: 100px
+	
+	&__wrapper
+		border-top: 1px solid $c-border
+	
+	&__navigation
+		margin: 0
+		padding: 0
+		list-style: none
+		line-height: 100px
+		
+		& > li
+			display: inline-block
+			color: $c-gray
+			font-size: .9em
+			margin-right: 10px
+				
+			&:last-child
+				margin-right: 0
+			
+		&--left
+			float: left
+			
+		&--right
+			float: right
+			
+	&__logo
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		line-height: 0
+		
+		&:hover
+			svg
+				fill: darken(#ccc, 10%)
+		
+		svg
+			width: 24px
+			fill: #ccc
+			
+@media (max-width: 991px)
+
+	.footer
+		
+		&__navigation
+			
+			& > li
+				display: none
+				margin-right: 0
+				
+			&--left
+				float: left
+				
+				li:first-child
+					display: block
+				
+		&__logo
+			left: auto
+			right: 0
+			transform: translate(0, -50%)
+			

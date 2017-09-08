@@ -1,0 +1,68 @@
+.user
+	float: left
+	position: relative
+	width: 25%
+	
+	&__img
+		
+		&-el
+			display: block
+			width: 100%
+			border-radius: 6px
+			
+	&__info
+	
+		&-basic
+			padding: 14px 0
+			border-bottom: 1px solid $c-border
+		
+			h1
+				margin: 0
+				color: $c-black
+				font-size: 1.8em
+				line-height: 1.2
+				
+			h2
+				margin: 0
+				color: $c-light-black
+				font-size: 1.4em
+				font-weight: 400
+				line-height: 1.2
+				
+			p
+				color: $c-gray
+				
+		&-btn
+			width: 100%
+			padding: .5em 1em
+			color: $c-black
+			font-weight: 600
+			text-align: center
+			background-color: $c-btn-background
+			background-image: linear-gradient(#fcfcfc, #eee)
+			border: 1px solid $c-btn-border
+			border-radius: 3px
+			
+			&:hover
+				background-image: linear-gradient(#eee, #ddd)
+			
+		&-meta
+			margin-bottom: 0
+			padding: 0
+			list-style: none
+			
+			li
+				color: $c-black
+				line-height: 1.8
+				
+				svg
+					vertical-align: middle
+					width: 16px
+					margin-right: 6px
+					fill: #999
+					
+@media (max-width: 800px)
+	
+	.user
+		display: none
+		

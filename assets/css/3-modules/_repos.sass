@@ -1,0 +1,106 @@
+.repos
+	float: left
+	position: relative
+	width: 75%
+	
+.repo__list
+	margin: 0
+	padding-left: 30px
+	list-style: none
+	
+	&-el
+		padding: 25px 0
+		border-bottom: 1px solid $c-border
+		
+		.basic
+			float: left
+		
+			a
+				font-size: 1.1em
+				font-weight: 600
+				
+			p
+				max-width: 325px
+				margin: 0
+				color: $c-gray
+				
+		.meta
+			float: right
+			width: 25%
+			max-width: 175px
+			color: $c-gray
+			
+			&__language
+				float: left
+				
+				&-color
+					display: inline-block
+					width: 12px
+					height: 12px
+					margin-right: 5px
+					border-radius: 50%
+					vertical-align: middle
+					
+				&-el
+					vertical-align: middle
+				
+			&__star
+				float: right
+				cursor: pointer
+				
+				&:hover
+					svg
+						fill: $c-highlight
+						
+					.meta__star-count
+						color: $c-highlight
+				
+				svg
+					margin-right: 5px
+					fill: $c-gray
+					vertical-align: middle
+					
+				&-count
+					vertical-align: middle
+					
+@media (max-width: 800px)
+	
+	.repos
+		float: none
+		width: 100%
+		
+	.repo__list
+		padding-left: 0
+		
+		&-el
+		
+			&:last-child
+				border-bottom: none
+			
+			.basic,
+			.meta
+				width: 50%
+				box-sizing: border-box
+				
+			.meta
+				padding-left: 15px
+				
+@media (max-width: 480px)
+		
+	.repo__list
+		
+		&-el
+			
+			.basic
+				float: none
+				width: 100%
+				margin-bottom: 10px
+				
+				p
+					max-width: 100%	
+				
+			.meta
+				float: none
+				width: 100%
+				padding-left: 0
+				
